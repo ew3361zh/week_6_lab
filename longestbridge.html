@@ -5,7 +5,7 @@
     <!-- Leaflet script and CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
     <!-- Our stylesheet. Make sure the size of the map div is set before trying to draw the map.-->
     <link rel="stylesheet" type="text/css" href="longestbridge.css">
     <!-- Our script, uses Leaflet to draw the maps and map components for this page  -->
@@ -16,6 +16,7 @@
 
     <h1>Where are the 5 longest bridges in the United States?</h1>
     <div id="bridge-map"></div>
-
+    <h1>Chart of Bridge Spans for Longest Bridges</h1>
+    <canvas id="bridge-chart"></canvas>
 </body>
 </html>
