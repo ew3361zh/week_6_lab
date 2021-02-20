@@ -9,7 +9,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 bridges =  [
-    {"name": "MinneapVerrazano-Narrows Bridge", "spanlength": 1298.4, "coordinates": [40.6066, -74.0447] }, 
+    {"name": "Verrazano-Narrows Bridge", "spanlength": 1298.4, "coordinates": [40.6066, -74.0447] }, 
     {"name": "Golden Gate Bridge", "spanlength": 1280.2, "coordinates": [37.8199, -122.4783] }, 
     {"name": "Mackinac Bridge", "spanlength": 1158.0, "coordinates": [45.8174, -84.7278] }, 
     {"name": "George Washington Bridge", "spanlength": 1067.0, "coordinates": [40.8517, -73.9527] }, 
