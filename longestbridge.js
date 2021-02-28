@@ -16,10 +16,16 @@ bridges =  [
     {"name": "Tacoma Narrows Bridge", "spanlength": 853.44, "coordinates": [47.2690, -122.5517] }
 ]
 
+//create blank arrays for chart 'data' and 'labels' arrays data
+let spanLengthArray = []
+let bridgeNameArray = []
 bridges.forEach( function(info) {
     let coordinates = info.coordinates
     let name = info.name
+    //add bridge name and span data from forEach loop
+    bridgeNameArray.push(name)
     let span = info.spanlength
+    spanLengthArray.push(span)
     let popupString = `<b>${name}</b><br>Span-length: ${span} meters`
     let marker = L.marker(coordinates)
         .bindPopup(popupString)
@@ -27,16 +33,16 @@ bridges.forEach( function(info) {
 })
 
 
-
 let canvas = document.querySelector('#bridge-chart')
 let ctx = canvas.getContext('2d')
 let chart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: [bridges[0].name, bridges[1].name, bridges[2].name, bridges[3].name, bridges[4].name],
+        // substitute in new arrays initialized and populated above as data sources for chart arrays
+        labels: bridgeNameArray,
         datasets: [ { 
             label: 'Bridge Span (in meters)',
-            data: [bridges[0].spanlength, bridges[1].spanlength, bridges[2].spanlength, bridges[3].spanlength, bridges[4].spanlength],
+            data: spanLengthArray,
             backgroundColor: ['fuchsia', 'gold', 'chartreuse', 'darkturquoise', 'maroon']
         } ]
     },
@@ -50,3 +56,4 @@ let chart = new Chart(ctx, {
         }
     }
 })
+
